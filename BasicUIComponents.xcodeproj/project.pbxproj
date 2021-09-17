@@ -29,6 +29,8 @@
 		23E5078E26ECC2B500596FFF /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5078D26ECC2B500596FFF /* ScrollViewController.swift */; };
 		23E507A626EDE65900596FFF /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E507A526EDE65900596FFF /* HomeTableViewController.swift */; };
 		23E507A826EDE7AB00596FFF /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E507A726EDE7AB00596FFF /* DetailTableViewController.swift */; };
+		69977A1C26F4B20900EC2706 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69977A1B26F4B20900EC2706 /* CalculatorViewModel.swift */; };
+		69A03B3D26F4F97B00BAFB9B /* BannerSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A03B3C26F4F97B00BAFB9B /* BannerSliderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		23E5078D26ECC2B500596FFF /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		23E507A526EDE65900596FFF /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		23E507A726EDE7AB00596FFF /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		69977A1B26F4B20900EC2706 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
+		69A03B3C26F4F97B00BAFB9B /* BannerSliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSliderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,7 @@
 				23E507A726EDE7AB00596FFF /* DetailTableViewController.swift */,
 				2319175026EE11E700617A9E /* DetailCollectionViewController.swift */,
 				2319175426EE1FCB00617A9E /* NavigationExampleViewController.swift */,
+				69A03B3C26F4F97B00BAFB9B /* BannerSliderViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 			children = (
 				2319174026EE018A00617A9E /* Cells */,
 				235C707E26EC900F00D7B5BB /* ViewControllers */,
+				69977A1D26F4B20F00EC2706 /* ViewModel */,
 				2319173D26EDEFAE00617A9E /* Extensions */,
 				23E5077C26EC941200596FFF /* UIComponents */,
 				23A2AA7826E4D504009310F0 /* AppDelegate.swift */,
@@ -208,6 +214,14 @@
 				23E5077F26EC95C900596FFF /* MyLabel.swift */,
 			);
 			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		69977A1D26F4B20F00EC2706 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				69977A1B26F4B20900EC2706 /* CalculatorViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,9 +357,11 @@
 			files = (
 				2319175726EE234C00617A9E /* MyNavigationViewController.swift in Sources */,
 				235C707D26EC900400D7B5BB /* ButtonViewController.swift in Sources */,
+				69977A1C26F4B20900EC2706 /* CalculatorViewModel.swift in Sources */,
 				2319175326EE146000617A9E /* CustomCollectionViewCell.swift in Sources */,
 				2319175526EE1FCB00617A9E /* NavigationExampleViewController.swift in Sources */,
 				23A2AA7D26E4D504009310F0 /* LabelAndTextFieldViewController.swift in Sources */,
+				69A03B3D26F4F97B00BAFB9B /* BannerSliderViewController.swift in Sources */,
 				23E5078026EC95C900596FFF /* MyLabel.swift in Sources */,
 				23E5078E26ECC2B500596FFF /* ScrollViewController.swift in Sources */,
 				2319175126EE11E700617A9E /* DetailCollectionViewController.swift in Sources */,

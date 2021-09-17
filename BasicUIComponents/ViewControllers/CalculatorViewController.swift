@@ -14,9 +14,13 @@ class CalculatorViewController: UIViewController {
     //@IBOutlet var digitButtons: [UIButton]!
     @IBOutlet weak var sqrtButton: UIButton!
     @IBOutlet weak var equalButton: UIButton!
+    @IBOutlet var actionButtons: [UIButton]!
+    
+    let calculatorVM = CalculatorViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
     }
     
@@ -41,23 +45,30 @@ class CalculatorViewController: UIViewController {
         }
     }
     
+    var operations: [String] = []
+    
     @IBAction func actionButtonTapped(_ sender: UIButton) {
         
-        let value = NSString(string: resultLabel.text ?? "0").doubleValue
-        resultLabel.text = String(sqrt(value))
+        let operation = calculatorVM.findOperation(buttonText: sender.currentTitle ?? "")
+        
+        switch operation {
+        case "=":
+            resultLabel.text = calculatorVM.equal(operations: operations)
+        case "√":
+            resultLabel.text = calculatorVM.square(operations: operations)
+        case nil:
+            break
+        default:
+            operations.append(sender.currentTitle!)
+            resultLabel.text! += sender.currentTitle!
+        }
+    }
+    
+    func changeDefaultColor() {
+        for button in actionButtons{
+            button.backgroundColor = .darkGray
+        }
     }
     
     
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
