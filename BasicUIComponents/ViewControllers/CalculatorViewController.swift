@@ -52,8 +52,6 @@ class CalculatorViewController: UIViewController {
             isTyping.toggle() //reset after tap √
         default:
             isTyping.toggle() //reset after tap + - / x
-            
-            print(resultLabel.text!)
             firstNumber = Double(resultLabel.text!)!
             operation = sender.currentTitle!
             resultLabel.text = "0"

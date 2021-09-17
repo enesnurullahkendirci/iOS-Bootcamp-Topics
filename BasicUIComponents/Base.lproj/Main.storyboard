@@ -271,9 +271,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="YCm-JG-3Wy"/>
                     <connections>
-                        <outlet property="equalButton" destination="5fp-TB-2hV" id="xzj-r2-Ok9"/>
                         <outlet property="resultLabel" destination="Rdb-Hd-Izr" id="ZgA-pa-aia"/>
-                        <outlet property="sqrtButton" destination="num-fS-m7t" id="rx1-3k-5dB"/>
                         <outletCollection property="actionButtons" destination="4Qg-C5-Dtv" collectionClass="NSMutableArray" id="R0i-AF-Krh"/>
                         <outletCollection property="actionButtons" destination="UDY-iX-rFX" collectionClass="NSMutableArray" id="yLO-VH-cEk"/>
                         <outletCollection property="actionButtons" destination="VjW-0X-SFG" collectionClass="NSMutableArray" id="Tsq-h4-IaT"/>
