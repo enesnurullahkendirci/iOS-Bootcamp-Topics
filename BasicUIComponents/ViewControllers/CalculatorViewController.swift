@@ -23,7 +23,7 @@ class CalculatorViewController: UIViewController {
         let digit = sender.currentTitle!
         let displayText = resultLabel.text ?? ""
 
-        if digit == "0" && displayText == "0" {
+        if digit == "0" && displayText == "0" { // block "00"
             return
         }
         
@@ -38,7 +38,6 @@ class CalculatorViewController: UIViewController {
         }
     }
     
-
     var operation = "+"
     @IBAction func actionButtonTapped(_ sender: UIButton) {
         
@@ -46,13 +45,13 @@ class CalculatorViewController: UIViewController {
         case "=":
             secondNumber = Double(resultLabel.text!)!
             resultLabel.text = calculatorVM.equal(operation, firstNumber, secondNumber)
-            isTyping.toggle()
+            isTyping.toggle() // reset after tap =
         case "√":
             secondNumber = Double(resultLabel.text!)!
             resultLabel.text = calculatorVM.square(secondNumber)
-            isTyping.toggle()
+            isTyping.toggle() //reset after tap √
         default:
-            isTyping.toggle()
+            isTyping.toggle() //reset after tap + - / x
             
             print(resultLabel.text!)
             firstNumber = Double(resultLabel.text!)!
