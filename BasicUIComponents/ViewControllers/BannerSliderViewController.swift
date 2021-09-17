@@ -12,6 +12,8 @@ class BannerSliderViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
+    var currentPage: Double = 0.0
+    
     let imageArray: [UIImage] = [UIImage(named: "butters")!, UIImage(named: "eric")!, UIImage(named: "kenny")!, UIImage(named: "token")!, UIImage(named: "zikirmatik")!]
     
     let labelArray: [String] = ["butters", "eric", "kenny", "token", "zikirmatik"]
@@ -25,12 +27,12 @@ class BannerSliderViewController: UIViewController {
         pageControl.numberOfPages = labelArray.count
         pageControl.addTarget(self, action: #selector(pageControlDidChange), for: .valueChanged)
         
-        configureScrollView()
+        configureScrollView() // Programmatically UIScrollView
         scrollView.contentSize.height = 1.0
 
     }
     
-    @IBAction func pageControlDidChange(_ sender: UIPageControl) {
+    @IBAction func pageControlDidChange(_ sender: UIPageControl) { // Made uiscrollView scroll when pagecontrol is changed.
         let current = sender.currentPage
         scrollView.setContentOffset(CGPoint(x: CGFloat(current) * view.frame.size.width, y: 0), animated: true)
         
@@ -42,7 +44,7 @@ class BannerSliderViewController: UIViewController {
         
         scrollView.isPagingEnabled = true
         
-        for index in 0..<imageArray.count{
+        for index in 0..<imageArray.count{ //add content to scrollView.
             let page = UIView(frame: CGRect(x: CGFloat(index) * view.frame.size.width, y: 0, width: view.frame.size.width, height: scrollView.frame.size.height))
             scrollView.addSubview(page)
             let image = UIImageView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: scrollView.frame.size.height))
@@ -57,29 +59,22 @@ class BannerSliderViewController: UIViewController {
         }
     }
     
-    
-    var currentPage: Double = 0.0
 }
 
 extension BannerSliderViewController: UIScrollViewDelegate{
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) { //change pagecontrol when scrollview did scroll
         currentPage = Double(scrollView.contentOffset.x / scrollView.frame.size.width)
         pageControl.currentPage = Int(currentPage)
     }
     
-    
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         
-        
-        
-        if currentPage <= 0.0 && velocity.x < 0 {
-            targetContentOffset[0].x = CGFloat(4) * view.frame.size.width
+        if currentPage <= 0.0 && velocity.x < 0 { //scrollview slide head to end.
+            targetContentOffset[0].x = CGFloat(4) * view.frame.size.width //change target point
         }
-        if currentPage >= 4.0 && velocity.x > 0{
+        if currentPage >= 4.0 && velocity.x > 0{ //scrollview slide end to head.
             targetContentOffset[0].x = CGFloat(0) * view.frame.size.width
         }
-        
-        
     }
 }
