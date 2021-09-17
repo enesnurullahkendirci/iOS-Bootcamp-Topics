@@ -12,25 +12,32 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     
     //@IBOutlet var digitButtons: [UIButton]!
+    @IBOutlet weak var sqrtButton: UIButton!
+    @IBOutlet weak var equalButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
     private var isTyping: Bool = false
     
     @IBAction func digitButtonTapped(_ sender: UIButton) {
-        let digit = String(sender.tag)
+        let digit = sender.currentTitle!
         let displayText = resultLabel.text ?? ""
 
+        if digit == "0" && displayText == "0" {
+            return
+        }
         
         if isTyping {
             resultLabel.text = displayText + digit
         } else {
             resultLabel.text = digit
             isTyping.toggle()
+            if resultLabel.text == "0" {
+                isTyping = false
+            }
         }
     }
     
