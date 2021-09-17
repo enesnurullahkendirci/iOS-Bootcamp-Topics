@@ -10,19 +10,12 @@ import UIKit
 class CalculatorViewController: UIViewController {
 
     @IBOutlet weak var resultLabel: UILabel!
-    
-    //@IBOutlet var digitButtons: [UIButton]!
-    @IBOutlet weak var sqrtButton: UIButton!
-    @IBOutlet weak var equalButton: UIButton!
     @IBOutlet var actionButtons: [UIButton]!
     
     let calculatorVM = CalculatorViewModel()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-    }
+    var firstNumber: Double = 0.0
+    var secondNumber: Double = 0.0
     
     private var isTyping: Bool = false
     
@@ -45,30 +38,28 @@ class CalculatorViewController: UIViewController {
         }
     }
     
-    var operations: [String] = []
-    
+
+    var operation = "+"
     @IBAction func actionButtonTapped(_ sender: UIButton) {
         
-        let operation = calculatorVM.findOperation(buttonText: sender.currentTitle ?? "")
-        
-        switch operation {
+        switch sender.currentTitle {
         case "=":
-            resultLabel.text = calculatorVM.equal(operations: operations)
+            secondNumber = Double(resultLabel.text!)!
+            resultLabel.text = calculatorVM.equal(operation, firstNumber, secondNumber)
+            isTyping.toggle()
         case "√":
-            resultLabel.text = calculatorVM.square(operations: operations)
-        case nil:
-            break
+            secondNumber = Double(resultLabel.text!)!
+            resultLabel.text = calculatorVM.square(secondNumber)
+            isTyping.toggle()
         default:
-            operations.append(sender.currentTitle!)
-            resultLabel.text! += sender.currentTitle!
+            isTyping.toggle()
+            
+            print(resultLabel.text!)
+            firstNumber = Double(resultLabel.text!)!
+            operation = sender.currentTitle!
+            resultLabel.text = "0"
         }
     }
-    
-    func changeDefaultColor() {
-        for button in actionButtons{
-            button.backgroundColor = .darkGray
-        }
-    }
-    
     
 }
+

@@ -8,8 +8,6 @@
 import UIKit
 
 class BannerSliderViewController: UIViewController {
-
-    @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -76,12 +74,9 @@ extension BannerSliderViewController: UIScrollViewDelegate{
         
         
         if currentPage <= 0.0 && velocity.x < 0 {
-//            scrollView.setContentOffset(CGPoint(x: CGFloat(2) * view.frame.size.width, y: 0), animated: true)
             targetContentOffset[0].x = CGFloat(4) * view.frame.size.width
-            
         }
         if currentPage >= 4.0 && velocity.x > 0{
-//            scrollView.setContentOffset(CGPoint(x: CGFloat(0) * view.frame.size.width, y: 0), animated: true)
             targetContentOffset[0].x = CGFloat(0) * view.frame.size.width
         }
         

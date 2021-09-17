@@ -141,12 +141,12 @@
 				2319175626EE234C00617A9E /* MyNavigationViewController.swift */,
 				235C707C26EC900400D7B5BB /* ButtonViewController.swift */,
 				23E507A526EDE65900596FFF /* HomeTableViewController.swift */,
-				23E5078B26ECB48900596FFF /* CalculatorViewController.swift */,
 				23E5078D26ECC2B500596FFF /* ScrollViewController.swift */,
 				23E507A726EDE7AB00596FFF /* DetailTableViewController.swift */,
 				2319175026EE11E700617A9E /* DetailCollectionViewController.swift */,
 				2319175426EE1FCB00617A9E /* NavigationExampleViewController.swift */,
 				69A03B3C26F4F97B00BAFB9B /* BannerSliderViewController.swift */,
+				23E5078B26ECB48900596FFF /* CalculatorViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
