@@ -659,7 +659,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fk1-Fh-LLU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1305.7971014492755" y="711.83035714285711"/>
+            <point key="canvasLocation" x="1257" y="712"/>
         </scene>
         <!--Detail Collection View Controller-->
         <scene sceneID="iLV-wC-qJO">
@@ -992,6 +992,26 @@
                                             <segue destination="tfh-Yo-5LC" kind="show" id="DkU-Ee-0NE"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="b0z-CL-9lw" style="IBUITableViewCellStyleDefault" id="5Lc-Jg-HHs">
+                                        <rect key="frame" x="0.0" y="549.83333396911621" width="390" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Lc-Jg-HHs" id="IEs-YZ-7TQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="360.33333333333331" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="BannerSlider" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b0z-CL-9lw">
+                                                    <rect key="frame" x="20" y="0.0" width="332.33333333333331" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="b25-FZ-Eeb" kind="show" id="YLr-Wl-Rd6"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -1111,7 +1131,7 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jHm-5B-FGU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1278" y="1127"/>
+            <point key="canvasLocation" x="1229" y="1406"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HFf-M3-guq">
@@ -1247,7 +1267,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KJU-nc-jNm">
-                                <rect key="frame" x="0.0" y="44" width="390" height="739"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="695"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AXz-6o-Kc6">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="695"/>
@@ -1294,7 +1314,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Toz-s7-zEz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3185" y="-70"/>
+            <point key="canvasLocation" x="-455" y="1405"/>
         </scene>
     </scenes>
     <resources>
