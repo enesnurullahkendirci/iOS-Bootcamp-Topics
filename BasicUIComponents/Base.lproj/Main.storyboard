@@ -1226,31 +1226,45 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heC-Vc-bzu">
-                                <rect key="frame" x="338" y="790" width="36" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="eDE-RQ-A1V"/>
-                                    <constraint firstAttribute="width" constant="36" id="sFo-zl-86N"/>
-                                </constraints>
-                                <state key="normal" image="arrow.clockwise" catalog="system"/>
-                                <connections>
-                                    <action selector="reloadButtonTapped:" destination="nLb-O3-QhO" eventType="touchUpInside" id="bX6-uD-cch"/>
-                                </connections>
-                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRb-Gr-Gv4">
+                                <rect key="frame" x="0.0" y="782" width="390" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem width="16" style="plain" systemItem="fixedSpace" id="bZW-fB-d36"/>
+                                    <barButtonItem title="back" image="chevron.left" catalog="system" id="HQE-Gr-pdP">
+                                        <connections>
+                                            <action selector="toolbarButtonsTapped:" destination="nLb-O3-QhO" id="nQL-Wl-EHH"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="16" style="plain" systemItem="fixedSpace" id="acT-1m-JDU"/>
+                                    <barButtonItem title="forward" image="chevron.right" catalog="system" id="C8H-jy-AIh">
+                                        <connections>
+                                            <action selector="toolbarButtonsTapped:" destination="nLb-O3-QhO" id="vTH-az-sr1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="5tV-im-Wcq"/>
+                                    <barButtonItem title="refresh" image="arrow.clockwise" catalog="system" id="7K4-fa-OsA">
+                                        <connections>
+                                            <action selector="toolbarButtonsTapped:" destination="nLb-O3-QhO" id="Lxg-8i-J0K"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jQr-r8-1ow"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="jQr-r8-1ow" firstAttribute="bottom" secondItem="Lyh-2d-nYr" secondAttribute="bottom" id="ZWd-Nc-WCh"/>
                             <constraint firstItem="Lyh-2d-nYr" firstAttribute="top" secondItem="jQr-r8-1ow" secondAttribute="top" id="c5Q-zs-gQT"/>
-                            <constraint firstItem="jQr-r8-1ow" firstAttribute="trailing" secondItem="heC-Vc-bzu" secondAttribute="trailing" constant="16" id="gXi-gy-ENR"/>
-                            <constraint firstItem="heC-Vc-bzu" firstAttribute="bottom" secondItem="jQr-r8-1ow" secondAttribute="bottom" constant="16" id="hPQ-hI-d6w"/>
                             <constraint firstItem="jQr-r8-1ow" firstAttribute="trailing" secondItem="Lyh-2d-nYr" secondAttribute="trailing" id="hPo-P1-eu9"/>
                             <constraint firstItem="Lyh-2d-nYr" firstAttribute="leading" secondItem="jQr-r8-1ow" secondAttribute="leading" id="skA-o1-WIg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wHN-UU-Ov4"/>
                     <connections>
+                        <outlet property="backButton" destination="HQE-Gr-pdP" id="fIQ-dc-5Yl"/>
+                        <outlet property="forwardButton" destination="C8H-jy-AIh" id="o0g-IH-Myb"/>
+                        <outlet property="toolBar" destination="oRb-Gr-Gv4" id="UTr-5l-Ahg"/>
                         <outlet property="webView" destination="Lyh-2d-nYr" id="cxi-b7-owB"/>
                     </connections>
                 </viewController>
@@ -1319,6 +1333,8 @@
     </scenes>
     <resources>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
