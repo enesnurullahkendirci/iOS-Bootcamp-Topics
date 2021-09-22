@@ -20,8 +20,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>MKDirectionsApplicationSupportedModes</key>
+	<array/>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>"Haritada yerinizi gorebilmek icin izin vermeniz gerekiyor"</string>
+	<string>&quot;Haritada yerinizi gorebilmek icin izin vermeniz gerekiyor&quot;</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

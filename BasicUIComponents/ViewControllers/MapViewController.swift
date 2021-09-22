@@ -35,7 +35,7 @@ class MapViewController: UIViewController {
         case .authorizedAlways, .authorizedWhenInUse:
             locationManager.requestLocation()
         case .denied, .restricted:
-            break // Odev 2 burada settings'e yonlendirmek uzere bir popup gosterip. popup action'inda settingsi actiralim.
+            performSegue(withIdentifier: "popup", sender: nil) // show popup
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
         @unknown default:
