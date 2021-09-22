@@ -5,6 +5,7 @@ target 'BasicUIComponents' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
+  pod 'Hero'
   # Pods for BasicUIComponents
 #	pod 'Alamofire', '~> 5.4' #hero framework cok basit sekilde ui animasyonlari
 
