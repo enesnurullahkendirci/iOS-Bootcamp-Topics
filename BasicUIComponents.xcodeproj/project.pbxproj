@@ -46,6 +46,8 @@
 		699240B126FA26CC00DE3244 /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699240B026FA26CC00DE3244 /* HeroDetailViewController.swift */; };
 		69977A1C26F4B20900EC2706 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69977A1B26F4B20900EC2706 /* CalculatorViewModel.swift */; };
 		69A03B3D26F4F97B00BAFB9B /* BannerSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A03B3C26F4F97B00BAFB9B /* BannerSliderViewController.swift */; };
+		69B8879B26FBEA71005F92E8 /* HeroDetailSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B8879A26FBEA71005F92E8 /* HeroDetailSecondViewController.swift */; };
+		69B8879E26FC9D8A005F92E8 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B8879D26FC9D8A005F92E8 /* CollectionViewCell.swift */; };
 		844B97D25D38BA508D226CD5 /* Pods_BasicUIComponents_BasicUIComponentsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E7823DBD8440F9D6C91F45 /* Pods_BasicUIComponents_BasicUIComponentsUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +116,8 @@
 		699240B026FA26CC00DE3244 /* HeroDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
 		69977A1B26F4B20900EC2706 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
 		69A03B3C26F4F97B00BAFB9B /* BannerSliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSliderViewController.swift; sourceTree = "<group>"; };
+		69B8879A26FBEA71005F92E8 /* HeroDetailSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HeroDetailSecondViewController.swift; path = "/Users/eneskendirci/Documents/GitHub/iOS-Bootcamp-Topics/BasicUIComponents/ViewControllers/HeroDetailSecondViewController.swift"; sourceTree = "<absolute>"; };
+		69B8879D26FC9D8A005F92E8 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		7FE3DD153E9AB7D6EE18F3FD /* Pods-BasicUIComponents-BasicUIComponentsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicUIComponents-BasicUIComponentsUITests.debug.xcconfig"; path = "Target Support Files/Pods-BasicUIComponents-BasicUIComponentsUITests/Pods-BasicUIComponents-BasicUIComponentsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		84E7823DBD8440F9D6C91F45 /* Pods_BasicUIComponents_BasicUIComponentsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicUIComponents_BasicUIComponentsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0B7FD32C5C2D81966ADC503 /* Pods-BasicUIComponentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicUIComponentsTests.release.xcconfig"; path = "Target Support Files/Pods-BasicUIComponentsTests/Pods-BasicUIComponentsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 		2319174026EE018A00617A9E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				69B8879D26FC9D8A005F92E8 /* CollectionViewCell.swift */,
 				2319174526EE021500617A9E /* CustomCell */,
 			);
 			path = Cells;
@@ -206,6 +211,7 @@
 		235C707E26EC900F00D7B5BB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				69B8879A26FBEA71005F92E8 /* HeroDetailSecondViewController.swift */,
 				23A2AA7C26E4D504009310F0 /* LabelAndTextFieldViewController.swift */,
 				2319175626EE234C00617A9E /* MyNavigationViewController.swift */,
 				235C707C26EC900400D7B5BB /* ButtonViewController.swift */,
@@ -570,6 +576,7 @@
 				69A03B3D26F4F97B00BAFB9B /* BannerSliderViewController.swift in Sources */,
 				23E5078026EC95C900596FFF /* MyLabel.swift in Sources */,
 				232D1B2626F6005700196177 /* WebViewContainerViewController.swift in Sources */,
+				69B8879B26FBEA71005F92E8 /* HeroDetailSecondViewController.swift in Sources */,
 				237B95AB26F72B4F00815A6D /* CoreDataViewController.swift in Sources */,
 				23E5078E26ECC2B500596FFF /* ScrollViewController.swift in Sources */,
 				2319175126EE11E700617A9E /* DetailCollectionViewController.swift in Sources */,
@@ -578,6 +585,7 @@
 				2373D01C26F719ED0090868F /* MyComponent.swift in Sources */,
 				23E5077E26EC943500596FFF /* MyButton.swift in Sources */,
 				2319174326EE020000617A9E /* CustomTableViewCell.swift in Sources */,
+				69B8879E26FC9D8A005F92E8 /* CollectionViewCell.swift in Sources */,
 				23A2AA7926E4D504009310F0 /* AppDelegate.swift in Sources */,
 				232D1B1F26F5F52400196177 /* MapViewController.swift in Sources */,
 				23E507A826EDE7AB00596FFF /* DetailTableViewController.swift in Sources */,

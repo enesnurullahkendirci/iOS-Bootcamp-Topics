@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Hero
 
 class MyNavigationViewController: UINavigationController {
 
@@ -13,6 +14,7 @@ class MyNavigationViewController: UINavigationController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
         self.navigationItem.backButtonTitle = ""
         
         let rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: nil)

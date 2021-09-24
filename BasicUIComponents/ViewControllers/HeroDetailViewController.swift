@@ -9,22 +9,64 @@ import UIKit
 import Hero
 
 class HeroDetailViewController: UIViewController {
-
+    
+    @IBOutlet weak var greyView: UIView!
+    
+    @IBOutlet weak var fibNumber: UITextField!
+    
+    @IBOutlet weak var calculateButton: UIButton!
+    
+    var fibArray: [Int] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        
+        self.hero.isEnabled = true
+        fibNumber.heroID = "fibNumber"
+        greyView.heroID = "greyOne"
+        calculateButton.heroID = "calculate"
+        
     }
     
-
-    /*
+    @IBAction func calculateClicked(_ sender: UIButton) {
+        let number = fibNumber.text ?? "0"
+        calculateFib(fibNumber: Int(number) ?? 0)
+        self.performSegue(withIdentifier: "secondHero", sender: self)
+    }
+    
+    func calculateFib(fibNumber n: Int) {
+        
+        switch n {
+        case 0:
+            break
+        case 1:
+            fibArray = [1]
+        case 92...:
+            fibNumber.text = "overflow"
+        default:
+            fibArray = [1, 1]
+            (2...n).forEach { i in
+                fibArray.append(fibArray[i - 1] + fibArray[i - 2])
+            }
+        }
+    }
+    
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "secondHero",
+           let destinationVC = segue.destination as? HeroDetailSecondViewController {
+            destinationVC.number = fibNumber.text ?? "0"
+            destinationVC.fibArray = fibArray
+        }
+        
     }
-    */
-
+    
+    
 }

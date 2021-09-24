@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/eneskendirci/Documents/GitHub/iOS-Bootcamp-Topics/BasicUIComponents/ViewControllers/HeroDetailSecondViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:BasicUIComponents.xcodeproj">
    </FileRef>
    <FileRef
