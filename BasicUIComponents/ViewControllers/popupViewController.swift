@@ -15,14 +15,6 @@ class popupViewController: UIViewController {
         if UIApplication.shared.canOpenURL(URL(string: UIApplication.openSettingsURLString)!){
             UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
         }
-        
-        
-
-//        if let url = URL(string: UIApplication.openSettingsURLString) {
-//            if UIApplication.shared.canOpenURL(url) {
-//                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-//            }
-//        }
     }
     
     @IBAction func cancelClicked(_ sender: UIButton) {

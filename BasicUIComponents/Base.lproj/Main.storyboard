@@ -406,7 +406,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="ZBS-2v-dgB"/>
                             </scrollView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6g4-hH-t1m">
-                                <rect key="frame" x="0.0" y="882" width="428" height="44"/>
+                                <rect key="frame" x="0.0" y="877" width="428" height="49"/>
                                 <items>
                                     <barButtonItem width="8" style="plain" systemItem="fixedSpace" id="vDm-SR-kWN"/>
                                     <barButtonItem title="&lt;" id="tqz-bY-6Kv"/>
@@ -419,7 +419,7 @@
                                 <color key="barTintColor" systemColor="systemRedColor"/>
                             </toolbar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M1G-xH-Gb4">
-                                <rect key="frame" x="0.0" y="722" width="428" height="160"/>
+                                <rect key="frame" x="0.0" y="717" width="428" height="160"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="ze3-Ok-fF1">
                                         <rect key="frame" x="0.0" y="0.0" width="428" height="160"/>
@@ -1422,9 +1422,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ub1-Lb-iz1"/>
                     <connections>
+                        <outlet property="blueView" destination="Nfa-hm-hK3" id="79x-Ui-ZqR"/>
                         <outlet property="calculateButton" destination="XzX-m2-96R" id="6WZ-zl-RwK"/>
                         <outlet property="fibNumber" destination="UWS-DO-vlp" id="e58-kb-ulf"/>
-                        <outlet property="greyView" destination="Nfa-hm-hK3" id="79x-Ui-ZqR"/>
                         <segue destination="EGU-SR-q5h" kind="presentation" identifier="secondHero" modalPresentationStyle="fullScreen" id="JzF-Pu-N6r"/>
                     </connections>
                 </viewController>
@@ -1446,9 +1446,12 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekx-zv-Rwb">
                                         <rect key="frame" x="64.333333333333343" y="0.0" width="363.66666666666663" height="84.666666666666671"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Calculate">
+                                        <buttonConfiguration key="configuration" style="plain" title="Recalculate">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="recalculateClicked:" destination="EGU-SR-q5h" eventType="touchUpInside" id="HMt-NB-awb"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ISG-vr-flT">
                                         <rect key="frame" x="0.0" y="0.0" width="64.333333333333329" height="84.666666666666671"/>
@@ -1472,7 +1475,29 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qlc-ai-hwk">
                                 <rect key="frame" x="0.0" y="128.66666666666666" width="428" height="339.33333333333337"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Highest Fibonacci number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQh-p6-c4G">
+                                        <rect key="frame" x="25" y="75" width="378" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQ1-7d-j0m">
+                                        <rect key="frame" x="25" y="129.00000000000003" width="378" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstItem="HQh-p6-c4G" firstAttribute="leading" secondItem="qlc-ai-hwk" secondAttribute="leading" constant="25" id="ETK-yz-od2"/>
+                                    <constraint firstItem="fQ1-7d-j0m" firstAttribute="leading" secondItem="qlc-ai-hwk" secondAttribute="leading" constant="25" id="Kvx-JK-yGt"/>
+                                    <constraint firstItem="HQh-p6-c4G" firstAttribute="top" secondItem="qlc-ai-hwk" secondAttribute="top" constant="75" id="XkV-gp-DdO"/>
+                                    <constraint firstAttribute="trailing" secondItem="HQh-p6-c4G" secondAttribute="trailing" constant="25" id="r78-nT-CaD"/>
+                                    <constraint firstAttribute="trailing" secondItem="fQ1-7d-j0m" secondAttribute="trailing" constant="25" id="s7s-E2-Lvc"/>
+                                    <constraint firstItem="fQ1-7d-j0m" firstAttribute="top" secondItem="HQh-p6-c4G" secondAttribute="bottom" constant="25" id="x8o-1j-eQ6"/>
+                                </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MtJ-bD-0Fm">
                                 <rect key="frame" x="0.0" y="468" width="428" height="424"/>
@@ -1534,6 +1559,7 @@
                         <outlet property="calculate" destination="ekx-zv-Rwb" id="0QA-mf-If1"/>
                         <outlet property="collectionView" destination="MtJ-bD-0Fm" id="xTI-sY-zLZ"/>
                         <outlet property="fibNumber" destination="ISG-vr-flT" id="d18-us-2b6"/>
+                        <outlet property="resultLabel" destination="fQ1-7d-j0m" id="ySE-dF-Oy9"/>
                         <outlet property="secondGreyView" destination="qlc-ai-hwk" id="eoN-aK-MkK"/>
                     </connections>
                 </viewController>

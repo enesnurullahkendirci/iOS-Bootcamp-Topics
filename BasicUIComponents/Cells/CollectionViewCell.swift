@@ -11,11 +11,8 @@ class CollectionViewCell: UICollectionViewCell {
     
     func addLabelToCell(_ text: String){
         
-        
         for subview in self.subviews {
-            print("sub", subview)
             if (subview.isKind(of: UILabel.self) && subview.tag == 50){
-                print("if")
                 let label = subview as! UILabel
                 label.text = text
                 return

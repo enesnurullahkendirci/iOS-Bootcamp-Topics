@@ -15,6 +15,7 @@ class HeroDetailSecondViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var fibNumber: UITextField!
     @IBOutlet weak var calculate: UIButton!
+    @IBOutlet weak var resultLabel: UILabel!
     
     var number: String = ""
     var fibArray: [Int] = []
@@ -29,14 +30,16 @@ class HeroDetailSecondViewController: UIViewController {
         fibNumber.heroID = "fibNumber"
         fibNumber.text = number
         calculate.heroID = "calculate"
-        secondGreyView.heroID = "greyOne"
+        secondGreyView.heroID = "resultView"
         
         randomColorAppendToArray(Int(number) ?? 0)
         
         collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: "collectionCell")
         collectionView.hero.modifiers = [.cascade]
         
-        secondGreyView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(popVC)))
+        if fibArray.count >= 1 {
+            resultLabel.text = String(fibArray[fibArray.count - 1])
+        }
     }
     
     func randomColorAppendToArray(_ number: Int) -> Void {
@@ -51,8 +54,7 @@ class HeroDetailSecondViewController: UIViewController {
             }
         }
     }
-    
-    @objc func popVC() {
+    @IBAction func recalculateClicked(_ sender: UIButton) {
         hero.dismissViewController(completion: nil)
     }
 }
@@ -66,7 +68,6 @@ extension HeroDetailSecondViewController: UICollectionViewDataSource, UICollecti
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! CollectionViewCell
         cell.backgroundColor = randomColors[indexPath.row]
         cell.hero.modifiers = [.fade, .scale(0.5)]
-        cell.clear()
         cell.addLabelToCell(String(fibArray[indexPath.row]))
         return cell
     }

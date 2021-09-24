@@ -10,7 +10,7 @@ import Hero
 
 class HeroDetailViewController: UIViewController {
     
-    @IBOutlet weak var greyView: UIView!
+    @IBOutlet weak var blueView: UIView!
     
     @IBOutlet weak var fibNumber: UITextField!
     
@@ -25,7 +25,7 @@ class HeroDetailViewController: UIViewController {
         
         self.hero.isEnabled = true
         fibNumber.heroID = "fibNumber"
-        greyView.heroID = "greyOne"
+        blueView.heroID = "resultView"
         calculateButton.heroID = "calculate"
         
     }
@@ -40,7 +40,7 @@ class HeroDetailViewController: UIViewController {
         
         switch n {
         case 0:
-            break
+            fibArray = []
         case 1:
             fibArray = [1]
         case 92...:
