@@ -17,34 +17,35 @@ class HeroDetailSecondViewController: UIViewController {
     @IBOutlet weak var calculate: UIButton!
     @IBOutlet weak var resultLabel: UILabel!
     
-    var number: String = ""
-    var fibArray: [Int] = []
-    var redCells: [UICollectionViewCell] = []
-    var randomColors: [UIColor] = []
+    var number: String = "" //for get input from firstVC
+    var fibArray: [Int] = [] //for get calculated fibonacci numbers from firstVC
+    var redCells: [UICollectionViewCell] = [] //delete this
+    var randomColors: [UIColor] = [] //contents of cells
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.hero.isEnabled = true
+        self.hero.isEnabled = true //turned on Hero
         
+        //added heroId's
         fibNumber.heroID = "fibNumber"
-        fibNumber.text = number
         calculate.heroID = "calculate"
         secondGreyView.heroID = "resultView"
         
-        randomColorAppendToArray(Int(number) ?? 0)
+        fibNumber.text = number //set input from firstVC
+        randomColorAppendToArray(Int(number) ?? 0) //contents created
         
-        collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: "collectionCell")
-        collectionView.hero.modifiers = [.cascade]
+        collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: "collectionCell") //cell was registered
+        collectionView.hero.modifiers = [.cascade] //animation added
         
-        if fibArray.count >= 1 {
+        if fibArray.count >= 1 { //Change result when get correct input
             resultLabel.text = String(fibArray[fibArray.count - 1])
         }
     }
     
     func randomColorAppendToArray(_ number: Int) -> Void {
         
-        switch number{
+        switch number{ //create contents when input bigger than 0
         case 0 :
             break
         default:
@@ -54,21 +55,22 @@ class HeroDetailSecondViewController: UIViewController {
             }
         }
     }
-    @IBAction func recalculateClicked(_ sender: UIButton) {
-        hero.dismissViewController(completion: nil)
+    
+    @IBAction func recalculateClicked(_ sender: UIButton) { //recalculate button method
+        hero.dismissViewController(completion: nil) //return to firstVC
     }
 }
 
 extension HeroDetailSecondViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return randomColors.count
+        return randomColors.count //created as many cells as the number of content.
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! CollectionViewCell
-        cell.backgroundColor = randomColors[indexPath.row]
-        cell.hero.modifiers = [.fade, .scale(0.5)]
-        cell.addLabelToCell(String(fibArray[indexPath.row]))
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! CollectionViewCell //create resuablecell
+        cell.backgroundColor = randomColors[indexPath.row] // added content
+        cell.hero.modifiers = [.fade, .scale(0.5)] // hero animation
+        cell.addLabelToCell(String(fibArray[indexPath.row])) // added content
         return cell
     }
     
@@ -76,7 +78,7 @@ extension HeroDetailSecondViewController: UICollectionViewDataSource, UICollecti
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: collectionView.frame.height / 2.5, height: 120)
+        return CGSize(width: collectionView.frame.height / 2.5, height: 120) //layout set
     }
     
     

@@ -705,7 +705,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zxa-WZ-0cH">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="T16-6C-Sd4">
+                        <barButtonItem key="rightBarButtonItem" title="Change UI" id="T16-6C-Sd4">
                             <connections>
                                 <action selector="barButtonClicked:" destination="Pur-IU-aSu" id="I6r-aD-cfR"/>
                             </connections>
