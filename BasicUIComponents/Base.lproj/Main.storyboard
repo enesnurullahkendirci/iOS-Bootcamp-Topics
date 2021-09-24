@@ -1633,7 +1633,7 @@
                         <outlet property="collectionView" destination="MtJ-bD-0Fm" id="xTI-sY-zLZ"/>
                         <outlet property="fibNumber" destination="ISG-vr-flT" id="d18-us-2b6"/>
                         <outlet property="resultLabel" destination="fQ1-7d-j0m" id="ySE-dF-Oy9"/>
-                        <outlet property="secondGreyView" destination="qlc-ai-hwk" id="eoN-aK-MkK"/>
+                        <outlet property="resultView" destination="qlc-ai-hwk" id="eoN-aK-MkK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TwA-gE-XGU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

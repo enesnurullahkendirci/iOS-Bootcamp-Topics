@@ -10,8 +10,7 @@ import Hero
 
 class HeroDetailSecondViewController: UIViewController {
     
-    
-    @IBOutlet weak var secondGreyView: UIView!
+    @IBOutlet weak var resultView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var fibNumber: UITextField!
     @IBOutlet weak var calculate: UIButton!
@@ -19,7 +18,6 @@ class HeroDetailSecondViewController: UIViewController {
     
     var number: String = "" //for get input from firstVC
     var fibArray: [Int] = [] //for get calculated fibonacci numbers from firstVC
-    var redCells: [UICollectionViewCell] = [] //delete this
     var randomColors: [UIColor] = [] //contents of cells
     
     override func viewDidLoad() {
@@ -30,7 +28,7 @@ class HeroDetailSecondViewController: UIViewController {
         //added heroId's
         fibNumber.heroID = "fibNumber"
         calculate.heroID = "calculate"
-        secondGreyView.heroID = "resultView"
+        resultView.heroID = "resultView"
         
         fibNumber.text = number //set input from firstVC
         randomColorAppendToArray(Int(number) ?? 0) //contents created

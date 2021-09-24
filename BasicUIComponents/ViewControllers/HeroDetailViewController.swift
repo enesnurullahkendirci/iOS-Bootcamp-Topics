@@ -11,9 +11,7 @@ import Hero
 class HeroDetailViewController: UIViewController {
     
     @IBOutlet weak var blueView: UIView!
-    
     @IBOutlet weak var fibNumber: UITextField!
-    
     @IBOutlet weak var calculateButton: UIButton!
     
     var fibArray: [Int] = [] //will hold calculated fibonacci numbers
