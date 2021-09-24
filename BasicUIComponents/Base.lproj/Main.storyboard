@@ -1411,11 +1411,18 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="5tV-im-Wcq"/>
+                                    <barButtonItem title="safari" image="safari" catalog="system" width="16" style="plain" id="ThY-ag-KGc">
+                                        <connections>
+                                            <action selector="toolbarButtonsTapped:" destination="nLb-O3-QhO" id="8w0-hK-7gc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="16" style="plain" systemItem="fixedSpace" id="ijj-73-euj"/>
                                     <barButtonItem title="refresh" image="arrow.clockwise" catalog="system" id="7K4-fa-OsA">
                                         <connections>
                                             <action selector="toolbarButtonsTapped:" destination="nLb-O3-QhO" id="Lxg-8i-J0K"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem width="16" style="plain" systemItem="fixedSpace" id="aI0-tS-728"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -1703,6 +1710,7 @@
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <image name="safari" catalog="system" width="128" height="121"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

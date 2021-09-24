@@ -89,11 +89,18 @@ class WebViewContainerViewController: UIViewController {
             webView.goForward()
         case "refresh":
             webView.reload()
+        case "safari":
+            openWithSafari()
         default:
             return
         }
     }
     
+    func openWithSafari() {
+        if let url = self.webView.url { //get current URL
+            UIApplication.shared.open(url) //open url with safari
+        }
+    }
 }
 
 extension WebViewContainerViewController: WKUIDelegate {

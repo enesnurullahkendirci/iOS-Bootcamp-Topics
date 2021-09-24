@@ -1,6 +1,6 @@
 //
 //  HeroDetailSecondViewController.swift
-//  
+//
 //
 //  Created by Enes N KENDİRCİ on 23.09.2021.
 //
