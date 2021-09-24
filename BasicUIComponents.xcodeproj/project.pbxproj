@@ -48,6 +48,7 @@
 		69A03B3D26F4F97B00BAFB9B /* BannerSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A03B3C26F4F97B00BAFB9B /* BannerSliderViewController.swift */; };
 		69B8879B26FBEA71005F92E8 /* HeroDetailSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B8879A26FBEA71005F92E8 /* HeroDetailSecondViewController.swift */; };
 		69B8879E26FC9D8A005F92E8 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B8879D26FC9D8A005F92E8 /* CollectionViewCell.swift */; };
+		69F3559F26FDF1D600F1081F /* FourthAssignmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F3559E26FDF1D600F1081F /* FourthAssignmentViewController.swift */; };
 		844B97D25D38BA508D226CD5 /* Pods_BasicUIComponents_BasicUIComponentsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E7823DBD8440F9D6C91F45 /* Pods_BasicUIComponents_BasicUIComponentsUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +119,7 @@
 		69A03B3C26F4F97B00BAFB9B /* BannerSliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSliderViewController.swift; sourceTree = "<group>"; };
 		69B8879A26FBEA71005F92E8 /* HeroDetailSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HeroDetailSecondViewController.swift; path = "/Users/eneskendirci/Documents/GitHub/iOS-Bootcamp-Topics/BasicUIComponents/ViewControllers/HeroDetailSecondViewController.swift"; sourceTree = "<absolute>"; };
 		69B8879D26FC9D8A005F92E8 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		69F3559E26FDF1D600F1081F /* FourthAssignmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthAssignmentViewController.swift; sourceTree = "<group>"; };
 		7FE3DD153E9AB7D6EE18F3FD /* Pods-BasicUIComponents-BasicUIComponentsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicUIComponents-BasicUIComponentsUITests.debug.xcconfig"; path = "Target Support Files/Pods-BasicUIComponents-BasicUIComponentsUITests/Pods-BasicUIComponents-BasicUIComponentsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		84E7823DBD8440F9D6C91F45 /* Pods_BasicUIComponents_BasicUIComponentsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicUIComponents_BasicUIComponentsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0B7FD32C5C2D81966ADC503 /* Pods-BasicUIComponentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicUIComponentsTests.release.xcconfig"; path = "Target Support Files/Pods-BasicUIComponentsTests/Pods-BasicUIComponentsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				237B95AA26F72B4F00815A6D /* CoreDataViewController.swift */,
 				699240B026FA26CC00DE3244 /* HeroDetailViewController.swift */,
 				694C7F7F26FA9B5D00AF7E56 /* popupViewController.swift */,
+				69F3559E26FDF1D600F1081F /* FourthAssignmentViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 				2319175726EE234C00617A9E /* MyNavigationViewController.swift in Sources */,
 				237B95A926F72AA900815A6D /* BasicUIComponents.xcdatamodeld in Sources */,
 				235C707D26EC900400D7B5BB /* ButtonViewController.swift in Sources */,
+				69F3559F26FDF1D600F1081F /* FourthAssignmentViewController.swift in Sources */,
 				69977A1C26F4B20900EC2706 /* CalculatorViewModel.swift in Sources */,
 				2319175326EE146000617A9E /* CustomCollectionViewCell.swift in Sources */,
 				2319175526EE1FCB00617A9E /* NavigationExampleViewController.swift in Sources */,
